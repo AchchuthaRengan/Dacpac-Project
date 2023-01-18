@@ -11,9 +11,4 @@ CREATE DATABASE [DeploymentDatabase]
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 
-IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
-begin
-EXEC [DeploymentDatabase].[dbo].[sp_fulltext_database] @action = 'enable'
-end
-GO
 
